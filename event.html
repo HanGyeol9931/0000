@@ -30,31 +30,47 @@
         float: right;
         cursor: pointer;
     }
+
+    .cardLike{
+        cursor: pointer;
+    }
 </style>
 <body>
     <div class="cardwrap">
-        <div class="hidden">
+        <div class="card-body">
             <img class="cardPhoto">
             <div class="cardInfo">
                 <h5 class="cardTitle"></h5>
                 <p class="cardText"></p>
                 <button href="#" class="cardBtn">확인하기</button>
-                <img class="cardLike">
+                <img class="cardLike" src="./icon/heart_off.png">
             </div>
         </div>
     </div>
 </body>
 <script>
-    //json에 내용 담아서 카드 여러개 구현
-    //좋아요 누르면 빨간 하트로 바뀜
-    let likeBtn = document.querySelector('.cardLike')
-    likeBtn.addEventListener("click", function(){
-        toggle(photo.idx)    
-    })
+    //json에 내용 담아서 카드 여러개 구현+
+    // const cards = [
+    //     {
+    //         idx : 1,
+    //         cardPhoto : '90.jpg',
+    //         cardInfo : '제목',
+    //         cardTitle : '내용',
+    //     }
+    // ]
 
-    // function toggleLike(idx) {
-    //     if()
+    // function cardList(){
+    //     let cardNode = document.querySelector('.cardwrap')
+    //     cardNode.querySelector('cardPhoto')
     // }
+    
+    //좋아요 누르면 빨간 하트로 바뀜
+    const like = document.querySelector('.cardLike')
+    like.addEventListener("click", ()=>{
+        like.toggle(".hearton")
+        console.log("확인")
+        // like.setAttribute("src", "./icon/heart_on.png")
+    })
 </script>
 </html>
 <div></div>
